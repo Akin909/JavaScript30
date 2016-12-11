@@ -1,0 +1,50 @@
+body{
+  background:url("https://images4.alphacoders.com/457/4574.jpg");
+ /*url("http://www.desktopimages.org/pictures/2013/0515/1/orig_204305.jpg");*/
+  background-size: cover;
+}
+.outer-container{
+  display: flex;
+  flex-direction: column;
+}
+.inner-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 33%;
+}
+.intro{
+  font-family: "Raleway",sans-serif;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: center;
+  width: auto;
+  height: 33%;
+}
+.drums{
+  text-align: center;
+  padding: 1em 1em;
+  font-size: 1.5vw;
+  /*font-weight: bold;*/
+  font-family: "Orbitron";
+  border: 2px solid #F6FCB9;
+  border-radius: 15px;
+  flex-basis:auto;
+  height: 8vw;
+  width: 7vw;
+  background: hsla(100,100%, 100%,0.3);
+  margin: 0.5em 0.5em;
+  -webkit-transition: width, height, linear 0.2s;
+}
+.drums:hover{
+  width:5em;
+  height:5em;
+  box-shadow: 1px 1px 5px 8px rgba(207,176,83,0.78);
+}
+.playing{
+    width:5em;
+    height:5em;
+    box-shadow: 1px 1px 5px 8px rgba(207,176,83,0.78);
+}
