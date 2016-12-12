@@ -16,6 +16,7 @@ window.addEventListener("keydown",function(event){
   drums
   let key = event.keyCode;
   let audio = document.querySelector(`audio[data-key="${key}"]`)
+  if(!audio){return ;}
   let drum = audio.parentElement;
   drum.className += " playing"
   window.addEventListener("keyup",function(event){

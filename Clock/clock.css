@@ -1,0 +1,60 @@
+body{
+  background: rgb(106, 215, 230);
+}
+.big-daddy{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 100%;
+}
+.clock-border{
+  width: 15em;
+  height: 15em;
+  border: 10px solid rgb(128, 85, 22);
+  border-radius: 50%;
+  align-items: center;
+  background-color: rgb(215, 215, 157);
+  background-image: url("http://cliparts.co/cliparts/8iE/jr4/8iEjr4BaT.png");
+  background-size: cover;
+  position: relative;
+  /*overflow: hidden;*/
+
+
+}
+.center-circle{
+  width:1em;
+  height:1em;
+  background: black;
+  border-radius: 50%;
+  position: relative;
+  margin: 46.5%;
+}
+.hand{
+  width: 7em;
+  position: absolute;
+  top: 50%;
+  transiton: all 0.05s;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius:50%;
+
+}
+#second-hand{
+  border: 3px solid yellow;
+  border-left-color: red;
+  border-left-width:4px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius:50%;
+}
+#minute-hand{
+  border: 3px solid black;
+
+}
+
+#hour-hand{
+  border: 3px solid black;
+}
