@@ -1,7 +1,5 @@
 const panels = document.querySelectorAll(".flex-panel")
 
-console.log(panels)
-
 panels.forEach((panel) =>{
     console.log(panel)
    panel.addEventListener("mouseover",makeActive)
