@@ -2,14 +2,20 @@ const panels = document.querySelectorAll(".flex-panel")
 
 panels.forEach((panel) =>{
     console.log(panel)
-   panel.addEventListener("mouseover",makeActive)
-   panel.addEventListener("mouseout",makeInactive)
-
+   panel.addEventListener("click",makeActive)
+   //could add functionality to animate panes on mouse in and out
+  //  panel.addEventListener("mouseout",makeInactive)
+   panel.addEventListener("transitionend",function(event){
+     if(event.propertyName.includes("flex")){
+     panel.classList.toggle("open-active")
+   }else{}
+   });
 })
 
 function makeActive(){
-  this.className += " open open-active"
+  this.classList.toggle("open");
 }
-function makeInactive(){
-  this.className = this.className.replace("open open-active","")
-}
+//could add functionality to animate panes on mouse in and out
+// function makeInactive(){
+//   this.classList.remove("open","open-active")
+// }
