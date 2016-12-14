@@ -1,0 +1,78 @@
+@import  url('https://fonts.googleapis.com/css?family=Nunito+Sans|Slabo+27px|Source+Sans+Pro');
+
+body{
+  margin: 0;
+  padding:0;
+  box-sizing: 0;
+  font-family: "Nunito Sans"
+}
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: hsl(131, 74%, 73%);
+  padding: 0.5em 0.5em;
+
+}
+.search-area{
+  width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search{
+  width: 50%;
+  min-height: 3em;
+  background: hsla(360, 100%, 100%, 0.8);
+  font-family: "Nunito Sans";
+  padding: 0.5em 0.5em;
+  margin-bottom: 0.2em;
+}
+
+.suggestions{
+  max-width: 70%;
+  min-width: 50%;
+}
+
+.suggestions li{
+  list-style-type: none;
+  min-height: 10%;
+  overflow: hidden;
+  background: hsla(360, 100%, 100%, 0.5);
+  padding: 0.7em 0.5em;
+
+}
+.suggestion.hide{
+opacity:0;
+}
+
+.suggestions li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
+}
+
+.suggestions li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
+}
+
+.name{
+float: left;
+padding-right: 2em;
+}
+.population{
+  float: right;
+}
+
+.h1{
+  background-color: hsl(68, 80%, 62%);
+}
+.h2{
+  background-color: hsl(68, 80%, 62%);
+
+}
