@@ -20,7 +20,7 @@ function displayMatches(){
 
   if (this.value===""){ return suggestions.innerHTML=""}
   //attempt to transition new content in by toggling class
-  suggestions.setAttribute("class","suggestions hide")
+  // suggestions.setAttribute("class","suggestions hide")
   // setTimeout(()=>{
     const matchArray = findMatches(this.value,cities)
     const html = matchArray.map((place)=>{
@@ -37,7 +37,7 @@ function displayMatches(){
     }).join('');
     suggestions.innerHTML = html
     //attempt to transition new content in
-    suggestions.setAttribute("class","suggestions")
+    // suggestions.setAttribute("class","suggestions")
   // },500)
 
 }

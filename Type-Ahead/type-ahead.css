@@ -3,7 +3,7 @@
 body{
   margin: 0;
   padding:0;
-  box-sizing: 0;
+  /*box-sizing: 0;*/
   font-family: "Nunito Sans"
 }
 .container{
@@ -24,23 +24,29 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex:1;
+
 }
 .search{
-  width: 50%;
+  width: 70%;
   min-height: 3em;
   background: hsla(360, 100%, 100%, 0.8);
   font-family: "Nunito Sans";
+  font-size: 1.25em;
   padding: 0.5em 0.5em;
   margin-bottom: 0.2em;
   text-align: center;
-  /*position: relative;*/
+  border: none;
+  border-radius: 10px;
+
 }
 
 .suggestions{
   position: relative;
-  height: 100%;
+  height: auto;
+  /*max-height: 70%;*/
+  /*overflow: hidden;*/
   max-width: 70%;
-  min-width: 50%;
 }
 
 .suggestions li{
@@ -48,7 +54,7 @@ body{
   justify-content: space-between;
   list-style-type: none;
   min-height: 10%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   background: hsla(360, 100%, 100%, 0.5);
   padding: 0.7em 0.5em;
 
