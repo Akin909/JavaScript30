@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Aref+Ruqaa|Raleway');
+
+body{
+  margin: 0;
+  background: yellow;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.container{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: auto;
+  width: 80%;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  background: white;
+  margin: 2em;
+  font-family: "Raleway",serif;
+}
+.text{
+  margin: 1em;
+  font: 1em;
+}
+.title{
+  text-decoration: underline;
+}
+.image{
+  height: 20em;
+  width: 20em;
+  margin: 0.6em;
+}
+
+.odd{
+  float: left;
+}
+.even{
+  float: right;
+}
