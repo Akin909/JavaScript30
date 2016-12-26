@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 body{
   margin: 0 0;
   padding: 0;
@@ -14,6 +15,7 @@ body{
   justify-content: center;
   background: url(http://islam.ru/en/sites/default/files/img/story/2014/09/Organic-Produce.jpg);
   background-size: cover;
+  font-family: "Raleway",serif;
 }
 .enfants{
   /*border: 1px solid #000;*/
@@ -38,13 +40,31 @@ body{
 .todo{
   background: hsla(86, 80%, 88%, 0.85);
   width: 50%;
-  height: 100%;
+  height: auto;
   padding: 1em;
   list-style-type: none;
   -webkit-box-shadow: -2px 2px 1px 0px rgba(18, 17, 18, 0.50);
   box-shadow: -2px 2px 1px 0px rgba(18, 17, 18, 0.50);
   /*height: 60%;*/
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
+
+.input-produce{
+  font-family: "Raleway";
+}
+.produce{
+  background: rgba(153, 198, 103, 0.83);
+  padding: 1em;
+  -webkit-box-shadow: -2px 2px 1px 0px rgba(18, 17, 18, 0.50);
+  box-shadow: -2px 2px 1px 0px rgba(18, 17, 18, 0.50);
+
+}
+
 .ope-farms{
   height: 10em;
 
