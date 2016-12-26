@@ -35,6 +35,7 @@ body{
 }
 
 .intro{
+  /*flex-basis: 0;*/
   /*height: 30%;*/
 }
 .todo{
@@ -49,20 +50,44 @@ body{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
 }
-
+.main{
+  /*flex-basis: 1;*/
+}
+.submit{
+  width: 5em;
+  font-family: "Raleway",serif;
+  background: #74a456;
+  border: none;
+}
 .input-produce{
   font-family: "Raleway";
 }
+
+
 .produce{
+  list-style-type: none;
   background: rgba(153, 198, 103, 0.83);
   padding: 1em;
   -webkit-box-shadow: -2px 2px 1px 0px rgba(18, 17, 18, 0.50);
   box-shadow: -2px 2px 1px 0px rgba(18, 17, 18, 0.50);
 
+}
+.produce input{
+  display: none;
+}
+.produce input + label:before{
+  content:'⬜';
+  margin-right: 10px;
+}
+.produce input:checked + label:before{
+  content:'🍎'
 }
 
 .ope-farms{
