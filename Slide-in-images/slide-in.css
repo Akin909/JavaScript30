@@ -40,11 +40,29 @@ body{
   height: 20em;
   width: 20em;
   margin: 0.6em;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  scale: 0.95;
 }
 
 .odd{
   float: left;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 .even{
   float: right;
+
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.active{
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+  scale: 1;
 }

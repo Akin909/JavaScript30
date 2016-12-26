@@ -19,9 +19,6 @@ body{
   background-image: url("http://cliparts.co/cliparts/8iE/jr4/8iEjr4BaT.png");
   background-size: cover;
   position: relative;
-  /*overflow: hidden;*/
-
-
 }
 .center-circle{
   width:1em;
@@ -35,7 +32,7 @@ body{
   width: 7em;
   position: absolute;
   top: 50%;
-  transiton: all 0.05s;
+  transition: all 0.05s;
   transform-origin: 100%;
   transform: rotate(90deg);
   transition-timing-function: cubic-bezier(0.1,2.7,0.58,1);
