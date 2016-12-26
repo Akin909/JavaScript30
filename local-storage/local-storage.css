@@ -65,6 +65,12 @@ body{
   font-family: "Raleway",serif;
   background: #74a456;
   border: none;
+  margin: 0 0.5em;
+}
+.toggle-btn{
+  margin-top: 0.3em;
+  -webkit-box-shadow: -3px 4px 3px 0px hsla(94, 28%, 25%, 0.98);
+  box-shadow: -3px 4px 3px 0px hsla(94, 28%, 25%, 0.98);
 }
 .input-produce{
   font-family: "Raleway";

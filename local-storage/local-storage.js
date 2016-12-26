@@ -1,7 +1,8 @@
 const addItems = document.querySelector('form.todo');
 const produce = document.querySelector('.produce');
 const items = JSON.parse(localStorage.getItem('items'))|| [];
-
+const clear = document.querySelector('.clearAll');
+const checkAll = document.querySelector('.checkAll');
 
 
 function addItem(event){
@@ -41,6 +42,21 @@ function toggleDone(event){
   localStorage.setItem('items',JSON.stringify(items));
 }
 
-populateList(items,produce)
+function clearAll(){
+  localStorage.clear()
+  while(produce.hasChildNodes()){
+    produce.removeChild(produce.lastChild);
+  }
+  produce.innerHTML = `<li>loading produce...</li>`
+}
+
+clear.addEventListener('click',clearAll)
+checkAll.addEventListener('click',()=>{
+  items.forEach(item => {
+    console.log(item)
+    item.done = true;
+  })
+})
 addItems.addEventListener('submit',addItem);
 produce.addEventListener('click',toggleDone)
+populateList(items,produce)
