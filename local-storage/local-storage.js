@@ -43,20 +43,22 @@ function toggleDone(event){
 }
 
 function clearAll(){
-  localStorage.clear()
+  window.localStorage.clear()
   while(produce.hasChildNodes()){
     produce.removeChild(produce.lastChild);
   }
   produce.innerHTML = `<li>loading produce...</li>`
 }
 
-clear.addEventListener('click',clearAll)
-checkAll.addEventListener('click',()=>{
+function check() {
   items.forEach(item => {
-    console.log(item)
-    item.done = true;
-  })
-})
+    item.done=true;
+    checkAll.innerHTML===`Check All`?checkAll.innerHTML='Uncheck all':"";//checkAll.innerHTML='Uncheck All';
+  });  localStorage.setItem('items',JSON.stringify(items))
+  populateList(items,produce)
+}
+clear.addEventListener('click',clearAll)
+checkAll.addEventListener('click',check)
 addItems.addEventListener('submit',addItem);
 produce.addEventListener('click',toggleDone)
 populateList(items,produce)
