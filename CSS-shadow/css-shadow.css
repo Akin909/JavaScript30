@@ -9,3 +9,6 @@ body{
   -ms-align-items: center;
   align-items: center;
 }
+.text{
+  font-size: 100px;
+}
