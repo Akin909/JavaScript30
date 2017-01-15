@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Band Names</title>
+    <style media="screen">
+      body{
+        margin: 0;
+      }
+      .container{
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        -ms-align-items: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: url('http://eskipaper.com/images/free-countryside-wallpaper-2.jpg');
+        background-size: cover;
+      }
+      .band-list{
+        background-color: rgb(217, 216, 196);
+        text-align: center;
+        width: 80%;
+        height: auto;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="band-list">
+        <ul class="bands">
+
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const bands = ['The Plot in You', 'The Devil Wears Prada', 'Pierce the Veil', 'Norma Jean', 'The Bled', 'Say Anything', 'The Midway State', 'We Came as Romans', 'Counterparts', 'Oh, Sleeper', 'A Skylit Drive', 'Anywhere But Here', 'An Old Dog'];
+
+      const article = new RegExp(/the|a |an |oh/,"ig");
+
+      function compare(band,nextBand){
+        let firstArticle = removeArticles(band),
+        secondArticle = removeArticles(nextBand);
+        if(firstArticle > secondArticle) return 1;
+        if(firstArticle < secondArticle) return -1;
+        return 0;
+        };
+      function removeArticles(band){
+          let arr = band.split(' ');
+          if(arr.length <= 1){return band;}
+          if(arr[0].match(article)){
+            return arr.splice(1).join(' ');
+          }
+      }
+
+      const sortedBands = bands.sort(compare)
+          console.log(sortedBands);
+    </script>
+  </body>
+</html>

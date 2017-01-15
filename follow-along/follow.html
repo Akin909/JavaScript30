@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Follow Along Links</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Work+Sans');
+    body{
+        background: url('http://www.walldevil.com/wallpapers/a63/5336-wallpapers-city-desktop-nhung-thanh-albums-nhng-thnh-ph.jpg');
+        background-size: cover;
+        margin: 0;
+        padding:0;
+        height: 100vh;
+        font-family: 'Work Sans';
+        } 
+        .page-text{
+            background-color: #8dade0;
+            width: 80%;
+            height: 80%;
+            margin: 10% 10%;
+
+        }
+        .title{
+            float: right;
+            text-align: center;
+        }
+        .menu{
+        float: left;
+        list-style-type: none; 
+        width:100%;
+        height: 3em;
+            background-color:rgb(207, 207, 209);
+            margin-top: 0;
+        }
+        .link{
+            border-right: black solid 0.5px ;
+            padding-left: 0.2em;
+            float: right;
+            padding-right: 1em;
+            width:10%;
+            height: 100%;
+        }
+        .highlight{
+          transition: all 0.2s;
+          border-bottom:2px solid white;
+          position: absolute;
+          top:0;
+          background:hsla(210, 66%, 67%,0.5);
+          left:0;
+          z-index: -1;
+          border-radius:20px;
+          display: block;
+          box-shadow: 0 0 10px rgba(0,0,0,0.2)
+               
+        }       
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li class="link">item</li>
+        <li class="link">item</li>
+        <li class="link">item</li>
+        <li class="link">item</li>
+        <li class="link">item</li>
+    </ul>
+    <div class="title">
+        <h1>Follow along</h1>
+        <div class="page-text">
+            Lorem ipsum dolor sit amet, aliquam tempus libero et, dui vitae incidunt sed pellentesque et a, nunc dis, dolor metus magna congue erat est aenean, tellus quis mattis. Sapien magna. Pellentesque laoreet consectetuer eget vel tristique, congue risus lorem gravida per, vulputate etiam in porttitor ut diam nonummy. Adipiscing ullamcorper etiam ullamcorper, volutpat nulla nullam vel nec. Inceptos aenean class dolor sem nullam. Pede aenean placerat porttitor sit tincidunt sagittis. Urna eu quisque in felis, fusce sem, aliquam cras.
+            Lacus leo aliquet curabitur mauris, erat nunc mi velit id pretium pede, cras curabitur erat vestibulum imperdiet suscipit diam. Amet egestas quis vehicula dignissim semper, orci vestibulum ridiculus, orci turpis nulla vitae. Semper ut. Ante nec massa justo, suscipit dolor eget, lorem at faucibus pede, nulla dolor, sem nulla. Bibendum mattis scelerisque, aliquet mi felis. Vel conubia risus primis nonummy arcu, elit rhoncus, dolor cursus nibh eu nulla rhoncus, ornare metus sed neque amet pede libero, leo mauris. Mollis volutpat, fringilla purus amet, ligula faucibus wisi vitae non lacus ornare, nunc sit.
+            Erat purus varius, laoreet et do, pulvinar leo, et phasellus sed sodales suspendisse vitae mauris, repellat urna fusce. Tortor nulla neque ut non egestas, cras turpis. Arcu tincidunt neque pellentesque turpis et. Non neque non tempor turpis molestie ante, dictum magna neque orci sodales pede sed. Est lacus semper velit id eu, urna dignissim quis sodales ante massa, cursus nam mi iaculis nec aliquam. Tortor ultricies facilisis, error ipsum vestibulum sapien integer adipiscing, magna nec sed vel, a ac morbi convallis, vitae cupidatat aliquet vehicula. Diam quam curabitur lectus, purus arcu posuere pellentesque. Pellentesque dictumst praesent, bibendum nec sociosqu lorem sed, lectus integer sapien libero hendrerit feugiat, volutpat suscipit eget nunc nunc, non maecenas convallis nullam tincidunt. Nulla sed felis. Auctor nulla, sed sed erat suspendisse. Quam mattis, vehicula nullam rhoncus a proin massa faucibus, dui mattis, accumsan nec dolor adipiscing, aenean molestie.
+        Massa non a nec libero, rhoncus nunc leo nibh nisl donec, vitae vestibulum ut. Condimentum diam. Aliquet morbi, pharetra ut, pharetra tristique nulla at. Ligula sed nullam malesuada ipsum, neque ac lectus justo, suspendisse egestas odio. Justo ipsum lorem, a malesuada, ut molestie euismod porta sed. Tellus eget lectus, id egestas lobortis, ut eros. In interdum arcu. Vestibulum purus cras ipsum ac eget, velit metus id, nulla in habitasse eget vel quam, maecenas morbi nunc, libero ipsum semper aliquam in ipsum. Praesent mollis id hendrerit sed, mauris accumsan ante quis, justo turpis at leo parturient lacus.</div>
+    </div>
+    <script>
+        const triggers =document.querySelectorAll('.link');
+        const highlight = document.createElement('span'); 
+        highlight.classList.add('highlight');
+        document.body.appendChild(highlight);
+        
+function highlightLink(){
+    const linkCoords = this.getBoundingClientRect();
+    console.log(linkCoords)
+    const coords = {
+        width: linkCoords.width,
+        height: linkCoords.height,
+        top: linkCoords.top + window.scrollY,
+        left: linkCoords.left + window.scrollX
+    }
+    // console.log(highlight);
+    highlight.style.width = `${coords.width}px`;
+    highlight.style.height = `${coords.height}px`;
+    highlight.style.transform = `translate(${coords.left}px,${coords.top}px)`;
+    highlight.style.zIndex = 0;
+}
+
+        triggers.forEach(trigger => trigger.addEventListener('mouseenter',highlightLink))
+    
+    
+    </script>
+</body>
+</html>
