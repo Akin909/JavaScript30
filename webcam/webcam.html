@@ -7,22 +7,28 @@
 </head>
 <body>
     <div class="controls">
+        <div class="rgb">
         <input name="rmin" type="range">
-<label for="rmin">Red Min:</label>
-<input type="range">
-<label for=""></label>
-<input type="range">
+        <label for="rmin">Red Min:</label>
+        <label for="rmax"> Red Max:</label>
+        <input type="range">
 
-<br>
+        <br>
 
 
-<label for=""></label>
-<input type="range">
-<label for=""></label>
-<input type="range">
+        <label for="gmin">Green Min:</label>
+        <input type="range" name="gmin" min=0 max=255>
+        <label for="gmax">Green Max</label>
+        <input type="range" name="gmax" min=0 max=255>
 
-<br>
+        <br>
+ 
+        <label for="gmin">Blue Min:</label>
+        <input type="range" name="bmin" min=0 max=255>
+        <label for="gmax">Blue Max:</label>
+        <input type="range" name="bmax" min=0 max=255>
 
+       </div>
         <button onclick="takePhoto()">Take Photo</button>
 </div>
    <div class="webcam"></div>
