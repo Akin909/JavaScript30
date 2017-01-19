@@ -6,10 +6,12 @@
     <link rel="stylesheet" href="webcam.css">
 </head>
 <body>
-    <div class="controls">
+    <div class="title">
+      <h1>Webcam Madness!!</h1> 
+    </div>
         <div class="rgb">
-        <input name="rmin" type="range">
         <label for="rmin">Red Min:</label>
+        <input name="rmin" type="range">
         <label for="rmax"> Red Max:</label>
         <input type="range">
 
@@ -28,10 +30,17 @@
         <label for="gmax">Blue Max:</label>
         <input type="range" name="bmax" min=0 max=255>
 
-       </div>
         <button onclick="takePhoto()">Take Photo</button>
-</div>
-   <div class="webcam"></div>
+       </div>
+   <div class="webcam">
+   <canvas class="photo"></canvas>
+   <video class="player"></video>
+   <div class="strip"></div></div>
+  <audio class="snap" src="http://wesbos.com/demos/photobooth/snap.mp3" hidden></audio>
+
+
+
+
     <script src='webcam.js'></script>
 </body>
 </html>
