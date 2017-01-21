@@ -34,6 +34,7 @@ function paintToCanvas() {
 		//Mess with them
 		pixels = redEffect(pixels)
 		// pixels = rgbSplit(pixels);
+		ctx.globalAlpha = 0.8;
 		//Put them back
 		ctx.putImageData(pixels, 0, 0);
 	},16);
@@ -73,7 +74,29 @@ function rgbSplit(pixels) {
 	return pixels
 }
 
+function greenScreen(pixels) {
+	const levels = {};
 
+	document.querySelectorAll('.rgb input').forEach((input) => {
+		levels[input.name] = input.value;
+	})
+
+for (var i = 0, len = pixels.data.length; i < len; i+4) {
+	let	red = pixels.data[i + 0];	
+	let	green = pixels.data[i + 1];	
+	let	blue = pixels.data[i + 2];
+	let	alpha = pixels.data[ i + 3 ];
+
+	if (red >= level.rmin) {
+			
+		}
+
+
+}
+
+
+
+}
 getVideo();
 
 

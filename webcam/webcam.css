@@ -42,9 +42,9 @@ body{
 
 .photo{
     border-color: #666666;
-    box-shadow: -3px 3px 0 #7F7F7F;
+    box-shadow:inset -3px 3px 0 #7F7F7F;
     border-style: inset;
-    border-width: 30px;
+    border-width: 60px;
     border-image:url('//s3-us-west-2.amazonaws.com/s.cdpn.io/4273/frame.png') 93 92 87 92 stretch stretch;
 
 }
